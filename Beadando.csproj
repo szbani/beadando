@@ -66,6 +66,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database.cs" />
+    <Compile Include="fogAdmin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fogAdmin.Designer.cs">
+      <DependentUpon>fogAdmin.cs</DependentUpon>
+    </Compile>
     <Compile Include="foglalas.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -86,6 +92,9 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="fogAdmin.resx">
+      <DependentUpon>fogAdmin.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="foglalas.resx">
       <DependentUpon>foglalas.cs</DependentUpon>
     </EmbeddedResource>

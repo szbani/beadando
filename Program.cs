@@ -9,6 +9,7 @@ namespace Beadando
     internal static class Program
     {
         public static bool exit = false;
+        public static Database db = new Database();
         /// <summary>
         /// The main entry point for the application.
         /// </summary>

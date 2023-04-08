@@ -14,21 +14,21 @@ namespace Beadando
     {
         bool admin;
         string username;
-        Database db;
+
         List<string> jaratokList;
         public Main(string username)
         {
             this.username = username;
-            db = new Database();
-            admin = db.isAdmin(username);
+            admin = Program.db.isAdmin(username);
             InitializeComponent();
-            jaratokList = db.getJaratok();
+            jaratokList = Program.db.getJaratok();
             usernameLabel.Text = username;
             foreach(string jarat in jaratokList)
             {
                 jaratokSelect.Items.Add(jarat);
             }
             jaratokSelect.Text = jaratokList[0];
+            if (admin) foglalasBtn.Text = "Foglalások";
         }
 
         private void logoutBtn_Click(object sender, EventArgs e)
@@ -50,8 +50,16 @@ namespace Beadando
 
         private void foglalasBtn_Click(object sender, EventArgs e)
         {
-            foglalas fog = new foglalas(jaratokSelect.Text,tipusSelect.Text);
-            fog.ShowDialog();
+            if (admin)
+            {
+                fogAdmin fogA = new fogAdmin(jaratokSelect.Text, tipusSelect.Text);
+                fogA.ShowDialog();
+            }
+            else
+            {
+                foglalas fog = new foglalas(jaratokSelect.Text, tipusSelect.Text);
+                fog.ShowDialog();
+            }
         }
     }
 }

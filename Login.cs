@@ -14,7 +14,6 @@ namespace Beadando
     {
         string username;
         string pass;
-        Database db = new Database();
         public Login()
         {
             InitializeComponent();
@@ -24,7 +23,7 @@ namespace Beadando
         {
             username = username_input.Text;
             pass = password_input.Text;
-            if (db.Login(username, pass))
+            if (Program.db.Login(username, pass))
             {   
                 this.Hide();
                 Main main = new Main(username);

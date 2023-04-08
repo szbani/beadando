@@ -45,18 +45,20 @@
             // 
             this.usernameLabel.AutoSize = true;
             this.usernameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.usernameLabel.Location = new System.Drawing.Point(12, 37);
+            this.usernameLabel.Location = new System.Drawing.Point(9, 30);
+            this.usernameLabel.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.usernameLabel.Name = "usernameLabel";
-            this.usernameLabel.Size = new System.Drawing.Size(124, 25);
+            this.usernameLabel.Size = new System.Drawing.Size(101, 20);
             this.usernameLabel.TabIndex = 0;
             this.usernameLabel.Text = "USERNAME";
             // 
             // logoutBtn
             // 
             this.logoutBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.logoutBtn.Location = new System.Drawing.Point(228, 179);
+            this.logoutBtn.Location = new System.Drawing.Point(171, 145);
+            this.logoutBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.logoutBtn.Name = "logoutBtn";
-            this.logoutBtn.Size = new System.Drawing.Size(179, 34);
+            this.logoutBtn.Size = new System.Drawing.Size(134, 28);
             this.logoutBtn.TabIndex = 3;
             this.logoutBtn.Text = "Kijelentkezés";
             this.logoutBtn.UseVisualStyleBackColor = true;
@@ -65,9 +67,10 @@
             // foglalasBtn
             // 
             this.foglalasBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.foglalasBtn.Location = new System.Drawing.Point(228, 100);
+            this.foglalasBtn.Location = new System.Drawing.Point(171, 81);
+            this.foglalasBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.foglalasBtn.Name = "foglalasBtn";
-            this.foglalasBtn.Size = new System.Drawing.Size(179, 34);
+            this.foglalasBtn.Size = new System.Drawing.Size(134, 28);
             this.foglalasBtn.TabIndex = 2;
             this.foglalasBtn.Text = "Foglalás";
             this.foglalasBtn.UseVisualStyleBackColor = true;
@@ -76,9 +79,10 @@
             // exitBtn
             // 
             this.exitBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.exitBtn.Location = new System.Drawing.Point(228, 232);
+            this.exitBtn.Location = new System.Drawing.Point(171, 188);
+            this.exitBtn.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(179, 33);
+            this.exitBtn.Size = new System.Drawing.Size(134, 27);
             this.exitBtn.TabIndex = 4;
             this.exitBtn.Text = "Kilépés";
             this.exitBtn.UseVisualStyleBackColor = true;
@@ -91,14 +95,15 @@
             this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(436, 28);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(327, 24);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
-            this.infoToolStripMenuItem.Size = new System.Drawing.Size(49, 24);
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.infoToolStripMenuItem.Text = "Info";
             this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
@@ -106,18 +111,20 @@
             // 
             this.jaratokSelect.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jaratokSelect.FormattingEnabled = true;
-            this.jaratokSelect.Location = new System.Drawing.Point(17, 109);
+            this.jaratokSelect.Location = new System.Drawing.Point(13, 89);
+            this.jaratokSelect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.jaratokSelect.Name = "jaratokSelect";
-            this.jaratokSelect.Size = new System.Drawing.Size(179, 28);
+            this.jaratokSelect.Size = new System.Drawing.Size(135, 24);
             this.jaratokSelect.TabIndex = 0;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 81);
+            this.label1.Location = new System.Drawing.Point(9, 66);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(77, 25);
+            this.label1.Size = new System.Drawing.Size(62, 20);
             this.label1.TabIndex = 7;
             this.label1.Text = "Járatok";
             // 
@@ -128,9 +135,10 @@
             this.tipusSelect.Items.AddRange(new object[] {
             "Normál",
             "Gyors"});
-            this.tipusSelect.Location = new System.Drawing.Point(17, 168);
+            this.tipusSelect.Location = new System.Drawing.Point(13, 136);
+            this.tipusSelect.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.tipusSelect.Name = "tipusSelect";
-            this.tipusSelect.Size = new System.Drawing.Size(179, 28);
+            this.tipusSelect.Size = new System.Drawing.Size(135, 24);
             this.tipusSelect.TabIndex = 1;
             this.tipusSelect.Text = "Normál";
             // 
@@ -138,17 +146,18 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(12, 140);
+            this.label2.Location = new System.Drawing.Point(9, 114);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 25);
+            this.label2.Size = new System.Drawing.Size(47, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Tipus";
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(436, 291);
+            this.ClientSize = new System.Drawing.Size(327, 236);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tipusSelect);
             this.Controls.Add(this.label1);
@@ -160,10 +169,11 @@
             this.Controls.Add(this.menuStrip1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Main";
-            this.Text = "Form2";
+            this.Text = "Menü";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);

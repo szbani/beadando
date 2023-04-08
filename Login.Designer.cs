@@ -39,9 +39,10 @@
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(113, 280);
+            this.button1.Location = new System.Drawing.Point(85, 228);
+            this.button1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(170, 34);
+            this.button1.Size = new System.Drawing.Size(128, 28);
             this.button1.TabIndex = 2;
             this.button1.Text = "Bejelentkezés";
             this.button1.UseVisualStyleBackColor = true;
@@ -51,27 +52,30 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(108, 176);
+            this.label1.Location = new System.Drawing.Point(81, 143);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(69, 25);
+            this.label1.Size = new System.Drawing.Size(54, 20);
             this.label1.TabIndex = 1;
             this.label1.Text = "Jelszó";
             // 
             // password_input
             // 
             this.password_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.password_input.Location = new System.Drawing.Point(113, 204);
+            this.password_input.Location = new System.Drawing.Point(85, 166);
+            this.password_input.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.password_input.Name = "password_input";
-            this.password_input.Size = new System.Drawing.Size(170, 30);
+            this.password_input.Size = new System.Drawing.Size(128, 26);
             this.password_input.TabIndex = 1;
             this.password_input.UseSystemPasswordChar = true;
             // 
             // username_input
             // 
             this.username_input.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.username_input.Location = new System.Drawing.Point(113, 129);
+            this.username_input.Location = new System.Drawing.Point(85, 105);
+            this.username_input.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.username_input.Name = "username_input";
-            this.username_input.Size = new System.Drawing.Size(170, 30);
+            this.username_input.Size = new System.Drawing.Size(128, 26);
             this.username_input.TabIndex = 0;
             this.username_input.Text = "vasarlo";
             // 
@@ -79,9 +83,10 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(108, 101);
+            this.label2.Location = new System.Drawing.Point(81, 82);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(150, 25);
+            this.label2.Size = new System.Drawing.Size(120, 20);
             this.label2.TabIndex = 3;
             this.label2.Text = "Felhasználónév";
             // 
@@ -89,18 +94,19 @@
             // 
             this.error.AutoSize = true;
             this.error.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.error.Location = new System.Drawing.Point(71, 257);
+            this.error.Location = new System.Drawing.Point(53, 209);
+            this.error.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.error.Name = "error";
-            this.error.Size = new System.Drawing.Size(266, 20);
+            this.error.Size = new System.Drawing.Size(225, 17);
             this.error.TabIndex = 4;
             this.error.Text = "Nem jó felhasználónév vagy jelszó";
             this.error.Visible = false;
             // 
             // Login
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(403, 351);
+            this.ClientSize = new System.Drawing.Size(302, 285);
             this.Controls.Add(this.error);
             this.Controls.Add(this.username_input);
             this.Controls.Add(this.label2);
@@ -108,10 +114,11 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "Login";
-            this.Text = "Form1";
+            this.Text = "Bejelentkezés";
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -15,21 +15,8 @@ namespace Beadando
         SQLiteDataReader reader;
         SQLiteCommand query;
         public Database() {
-            sqlite_conn = CreateConnection();
-        }
-
-        private SQLiteConnection CreateConnection()
-        {
-            SQLiteConnection sqlite_conn;
             sqlite_conn = new SQLiteConnection("Data Source=db.db;");
-            try
-            {
-                sqlite_conn.Open();
-            }catch (Exception ex)
-            {
-                
-            }
-            return sqlite_conn;
+            sqlite_conn.Open();
         }
 
         public bool isAdmin(string user)
@@ -59,16 +46,16 @@ namespace Beadando
             return list;
         }
 
-        public void vasarlas(int jarat,List<int>ulesek,string nev)
+        public void vasarlas(int jarat,List<int>ulesek,string nev,string megallo,double kupon)
         {
             string values = "";
             foreach (int ules in ulesek)
             {
                 if (values != "") values += ",";
-                values += "('" + jarat + "','" + ules + "','" + nev + "')";
+                values += "('" + jarat + "','" + ules + "','" + nev + "','"+megallo+"',"+kupon+")";
             }
             query = sqlite_conn.CreateCommand();
-            query.CommandText = "INSERT INTO foglaltak(jaratid,ules,nev) VALUES " + values;
+            query.CommandText = "INSERT INTO foglaltak(jaratid,ules,nev,leszall,kupon) VALUES " + values;
             query.ExecuteNonQuery();
         }
 
@@ -98,7 +85,19 @@ namespace Beadando
             }
             return jaratok;
         }
-
+        public List<string> getJaratMegallok(int jarat)
+        {
+            List<string> list = new List<string>();
+            query = sqlite_conn.CreateCommand();
+            query.CommandText = "SELECT megallo FROM megallok WHERE jaratid = '" + jarat + "' ORDER BY sorrend";
+            reader = query.ExecuteReader();
+            while (reader.Read())
+            {
+                string str = reader.GetString(0);
+                list.Add(str);
+            }
+            return list;
+        }
         public bool Login(string user,string pass)
         {
             query = sqlite_conn.CreateCommand();
@@ -109,14 +108,12 @@ namespace Beadando
                 int count = reader.GetInt32(0);
                 if (count == 1)
                 {
-                    reader.Close();
                     return true;
                 }
-                reader.Close();
                 return false;
             }
-
             return false;
+            
         }
 
     }
