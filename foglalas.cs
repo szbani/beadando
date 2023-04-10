@@ -169,6 +169,7 @@ namespace Beadando
                 }
             }
             megallok = Program.db.getJaratMegallok(this.jarat);
+            megallok.Remove(megallok[0]);
             vegallomasSelect.DataSource = megallok;
             vegallomasSelect.Text = megallok[megallok.Count - 1];
         }

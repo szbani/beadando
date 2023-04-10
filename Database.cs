@@ -46,6 +46,25 @@ namespace Beadando
             return list;
         }
 
+        public List<List<string>> getAdminFoglaltak(int jarat)
+        {
+            List<List<String>> list = new List<List<string>>();
+            
+            query = sqlite_conn.CreateCommand();
+            query.CommandText = "SELECT ules, nev, leszall, kupon FROM foglaltak WHERE jaratid = "+ jarat +"";
+            reader = query.ExecuteReader();
+            while (reader.Read())
+            {
+                List<string> eleme = new List<string>();
+                eleme.Add(reader.GetInt32(0).ToString());
+                eleme.Add(reader.GetString(1));
+                eleme.Add(reader.GetString(2));
+                eleme.Add(reader.GetDouble(3).ToString());
+                list.Add(eleme);
+            }
+            return list;
+        }
+
         public void vasarlas(int jarat,List<int>ulesek,string nev,string megallo,double kupon)
         {
             string values = "";
