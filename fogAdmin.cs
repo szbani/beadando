@@ -34,12 +34,12 @@ namespace Beadando
             {
                 double k = 1;
                 string kupon = "nincs";
-                if (hely[3].Equals(0.8))
+                if (hely[3].Equals("0.8"))
                 {
                     kupon = "20%";
                     k = 0.8;
                 }
-                else if (hely[3].Equals(0.9))
+                else if (hely[3].Equals("0.9"))
                 { 
                     kupon = "10%";
                     k = 0.9;
@@ -56,7 +56,7 @@ namespace Beadando
                     else penz += 750;
                 }
                 penz = Convert.ToInt32(penz * k);
-                if (hely[2].Equals(vegallomas)) penz -= 500;
+                if (!hely[2].Equals(vegallomas)) penz -= 500;
                 string helyadat = hely[0] + "; " + hely[1] + "; " + hely[2] + "; " + kupon + "; " + penz.ToString() + ";";
                 bevetel += penz;
                 foglalasLista.Items.Add(helyadat);
